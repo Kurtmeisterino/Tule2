@@ -9,3 +9,6 @@ window.onscroll = function() {
         header.classList.remove('shrink');
     }
 };
+document.querySelector('.hamburger').addEventListener('click', function() {
+    document.querySelector('nav ul').classList.toggle('active');
+});
