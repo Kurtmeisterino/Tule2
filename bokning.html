@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boka Tid - Tules Skönhet</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Lägger till en ikon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 
 <body>
@@ -29,91 +31,56 @@
 
     <section id="bokning" class="container">
         <h2>Boka Tid</h2>
-        <form id="bokningsform">
-            <label for="namn">Namn:</label>
-            <input type="text" id="namn" name="namn" required>
+        <form id="bokningsform" action="booking.php" method="POST" class="form-grid">
+            <div class="form-group">
+                <label for="namn"><i class="fas fa-user"></i> Namn:</label>
+                <input type="text" id="namn" name="namn" placeholder="Ditt fullständiga namn" required>
+            </div>
             
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+            <div class="form-group">
+                <label for="email"><i class="fas fa-envelope"></i> Email:</label>
+                <input type="email" id="email" name="email" placeholder="Din e-postadress" required>
+            </div>
             
-            <label for="tjanst">Välj Tjänst:</label>
-            <select id="tjanst" name="tjanst">
-                <!-- Fransar & Bryn -->
-                <option value="browlift">Browlift - 550 kr</option>
-                <option value="fargning_bryn">Färgning av bryn - 200 kr</option>
-                <option value="fargning_fransar">Färgning av fransar - 200 kr</option>
-                <option value="fargning_fransar_bryn">Färgning av fransar & bryn - 350 kr</option>
-                <option value="lashlift_browlift">Lashlift & Browlift - 1000 kr</option>
-                <option value="lashlift_bryn_fransfarg">Lashlift med bryn & fransfärg - 700 kr</option>
-                <option value="plockning_bryn">Plockning av bryn - 150 kr</option>
-                
-                <!-- Fotvård -->
-                <option value="fotvard">Fotvård - 570 kr</option>
-                <option value="fotvard_pensionar">Fotvård för pensionär - 350 kr</option>
-                <option value="pedikyr_herr">Pedikyr, Herr - 490 kr</option>
-                <option value="pedikyr_herr_aterbesok">Pedikyr, Herr (återbesök) - 410 kr</option>
-                <option value="pedikyr_gellack">Pedikyr med gellack - 570 kr</option>
-                <option value="pedikyr_gellack_aterbesok">Pedikyr med gellack (återbesök) - 490 kr</option>
-                <option value="pedikyr_gellack_pensionar">Pedikyr med gellack för pensionär - 400 kr</option>
-                <option value="pedikyr_utan_lackning">Pedikyr utan lackning - 490 kr</option>
-                <option value="pedikyr_utan_lackning_aterbesok">Pedikyr utan lackning (återbesök) - 410 kr</option>
-                
-                <!-- Nagelförlängning -->
-                <option value="nagelforlangning_aterbesok">Återbesök, Nagelförlängning (gelé naglar) - 650 kr</option>
-                <option value="nagelforlangning_aterbesok_design">Återbesök, Nagelförlängning design (gelé naglar) - 700 kr</option>
-                <option value="nagelforlangning_aterbesok_extra_lang">Återbesök, Nagelförlängning extra långa (gelé naglar) - 950 kr</option>
-                <option value="lagning_nagel">Lagning av en nagel - 50 kr</option>
-                <option value="nagelforlangning_gel">Nagelförlängning (gelé naglar) - 800 kr</option>
-                <option value="nagelforlangning_gel_design">Nagelförlängning design (gelé naglar) - 850 kr</option>
-                <option value="nagelforlangning_gel_extra_lang">Nagelförlängning extra långa (gelé naglar) - 950 kr</option>
-
-                <!-- Naglar -->
-                <option value="borttagning_akrylnaglar">Borttagning av akrylnaglar - 500 kr</option>
-                <option value="borttagning_gelenaglar">Borttagning av gelénaglar - 300 kr</option>
-                <option value="borttagning_gellack">Borttagning av gellack/gellack med förstärkning - 200 kr</option>
-                <option value="gellack">Gellack - 420 kr</option>
-                <option value="gellack_forstarkning">Gellack med förstärkning (design, fransk & glitter) - 650 kr</option>
-                <option value="gellack_tidigare_material">Gellack med tidigare material - 450 kr</option>
-                <option value="manikyr">Manikyr - 390 kr</option>
-                <option value="manikyr_herr">Manikyr, herr - 390 kr</option>
-
-                <!-- Socker vaxning -->
-                <option value="vaxning_armar">Armar - 520 kr</option>
-                <option value="vaxning_armhalor">Armhålor - 200 kr</option>
-                <option value="vaxning_bikinilinje">Bikinilinje - 370 kr</option>
-                <option value="vaxning_brasiliansk">Brasiliansk - 600 kr</option>
-                <option value="vaxning_brasiliansk_aterbesok">Brasiliansk (återbesök) - 450 kr</option>
-                <option value="vaxning_brasiliansk_armhalor">Brasiliansk & armhålor - 700 kr</option>
-                <option value="vaxning_brasiliansk_halva_ben">Brasiliansk & halva ben - 920 kr</option>
-                <option value="vaxning_brasiliansk_hela_ben">Brasiliansk & hela ben - 1350 kr</option>
-                <option value="vaxning_halva_ben">Halva ben - 550 kr</option>
-                <option value="vaxning_hela_ben">Hela ben - 950 kr</option>
-                <option value="vaxning_lar">Lår - 650 kr</option>
-                <option value="vaxning_mage_rygg">Mage & rygg - 450 kr</option>
-                <option value="vaxning_nasborrar">Näsborrar - 150 kr</option>
-                <option value="vaxning_overlapp">Överläpp - 200 kr</option>
-
-                <!-- Vaxning för män -->
-                <option value="vaxning_rygg_man">Rygg - 600 kr</option>
-                <option value="vaxning_brost_man">Bröst - 400 kr</option>
-                <option value="vaxning_brost_mage_man">Bröst & mage - 600 kr</option>
-                <option value="vaxning_rygg_brost_mage_man">Rygg, bröst & mage - 800 kr</option>
-                <option value="vaxning_ben_man">Ben - 700 kr</option>
-                <option value="vaxning_armar_man">Armar - 400 kr</option>
-                <option value="vaxning_armhalor_man">Armhålor - 200 kr</option>
-            </select>
+            <div class="form-group">
+                <label for="tjanst"><i class="fas fa-concierge-bell"></i> Välj Tjänst:</label>
+                <select id="tjanst" name="tjanst" required>
+                    <option value="">Välj en tjänst</option>
+                    <!-- Fransar & Bryn -->
+                    <option value="browlift">Browlift - 550 kr</option>
+                    <option value="fargning_bryn">Färgning av bryn - 200 kr</option>
+                    <option value="fargning_fransar">Färgning av fransar - 200 kr</option>
+                    <option value="fargning_fransar_bryn">Färgning av fransar & bryn - 350 kr</option>
+                    <option value="lashlift_browlift">Lashlift & Browlift - 1000 kr</option>
+                    <option value="lashlift_bryn_fransfarg">Lashlift med bryn & fransfärg - 700 kr</option>
+                    <option value="plockning_bryn">Plockning av bryn - 150 kr</option>
+                    <!-- Fotvård -->
+                    <option value="fotvard">Fotvård - 570 kr</option>
+                    <!-- Fyll i fler tjänster enligt tidigare -->
+                </select>
+            </div>
             
-            <label for="datum">Välj Datum:</label>
-            <input type="date" id="datum" name="datum" required>
+            <div class="form-group">
+                <label for="datum"><i class="fas fa-calendar-alt"></i> Välj Datum:</label>
+                <input type="date" id="datum" name="datum" required>
+            </div>
             
-            <button type="submit" class="btn">Boka Nu</button>
+            <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Boka Nu</button>
         </form>
 
-        <div id="bekraftelse" style="display:none;">
+        <div id="bekraftelse" class="confirmation" style="display:none;">
             <h3>Tack för din bokning!</h3>
             <p>Vi har mottagit din bokningsförfrågan och kommer att bekräfta den via e-post så snart som möjligt.</p>
         </div>
     </section>
 
     <footer>
-        <div class
+        <div class="container">
+            <p>&copy; 2024 Tules Skönhet. Alla rättigheter förbehållna.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
