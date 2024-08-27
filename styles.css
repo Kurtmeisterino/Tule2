@@ -142,3 +142,29 @@ footer {
 footer p {
     margin: 0;
 }
+
+/* Service Category Styling */
+.service-category {
+    margin-bottom: 40px;
+}
+
+.service-category h3 {
+    background-color: #e0b1b1;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.service-category ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.service-category ul li {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
