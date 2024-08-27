@@ -77,12 +77,27 @@ nav ul li a:hover {
     margin-bottom: 30px;
 }
 
+/* About Section */
+#about {
+    padding: 50px 0;
+    text-align: center;
+}
+
+#about h2 {
+    margin-bottom: 20px;
+}
+
+#about p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
 /* Services Section */
-#tjanster {
+#services {
     padding: 50px 0;
 }
 
-#tjanster h2 {
+#services h2 {
     text-align: center;
     margin-bottom: 40px;
 }
@@ -151,3 +166,87 @@ nav ul li a:hover {
 #bokningsform {
     display: flex;
     flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#bokningsform label {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#bokningsform input, #bokningsform select, #bokningsform textarea {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+#bokningsform .btn {
+    background-color: #e0b1b1;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#bokningsform .btn:hover {
+    background-color: #d18b8b;
+}
+
+/* Contact Section */
+#contact {
+    padding: 50px 0;
+}
+
+#contact h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#kontaktform {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#kontaktform label {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#kontaktform input, #kontaktform textarea {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+#kontaktform .btn {
+    background-color: #e0b1b1;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#kontaktform .btn:hover {
+    background-color: #d18b8b;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 0;
+}
