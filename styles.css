@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif;
     color: #333;
     line-height: 1.6;
     background-color: #f9f9f9;
@@ -17,6 +17,7 @@ body {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 20px;
 }
 
 /* Header */
@@ -72,8 +73,8 @@ nav ul li a:hover {
     background: url('hero-image.jpg') no-repeat center center/cover;
     color: white;
     text-align: center;
-    padding: 200px 0;
-    margin-bottom: 20px;
+    padding: 150px 20px;
+    margin-bottom: 40px;
 }
 
 #hero .overlay {
@@ -83,21 +84,21 @@ nav ul li a:hover {
     right: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    z-index: 1;
 }
 
 #hero h2 {
-    font-size: 4rem;
+    font-size: 3rem;
     margin-bottom: 20px;
     z-index: 2;
+    position: relative;
 }
 
 #hero p {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin-bottom: 30px;
     z-index: 2;
+    position: relative;
 }
 
 #hero .btn {
@@ -108,6 +109,7 @@ nav ul li a:hover {
     border-radius: 5px;
     font-size: 1.2rem;
     z-index: 2;
+    position: relative;
     transition: background-color 0.3s ease;
 }
 
@@ -117,30 +119,24 @@ nav ul li a:hover {
 
 /* About Section */
 #about {
-    padding: 50px 0;
+    padding: 50px 20px;
     text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
 }
 
 #about h2 {
     margin-bottom: 20px;
     font-size: 2.5rem;
+    color: #e0b1b1;
 }
 
 #about p {
     font-size: 1.2rem;
     line-height: 1.8;
-}
-
-/* Footer */
-footer {
-    background: #333;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-}
-
-footer p {
-    margin: 0;
+    margin-bottom: 20px;
 }
 
 /* Service Category Styling */
@@ -186,6 +182,7 @@ footer p {
 .form-group label {
     font-weight: bold;
     margin-bottom: 8px;
+    color: #333;
 }
 
 .form-group input,
@@ -194,6 +191,7 @@ footer p {
     border-radius: 5px;
     border: 1px solid #ddd;
     font-size: 1rem;
+    transition: border-color 0.3s ease;
 }
 
 .form-group input:focus,
@@ -236,4 +234,75 @@ footer p {
 
 .confirmation h3 {
     color: #4caf50;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Responsiv Design */
+@media (max-width: 768px) {
+    header .logo h1 {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #hero {
+        padding: 100px 20px;
+    }
+
+    #hero h2 {
+        font-size: 2.5rem;
+    }
+
+    #hero p {
+        font-size: 1rem;
+    }
+
+    .form-grid {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    header .logo h1 {
+        font-size: 1.5rem;
+    }
+
+    #hero h2 {
+        font-size: 2rem;
+    }
+
+    #hero p {
+        font-size: 0.9rem;
+    }
+
+    .service-category h3 {
+        font-size: 1.2rem;
+    }
+
+    .service-category ul li {
+        font-size: 1rem;
+    }
+
+    .btn-primary {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
 }
