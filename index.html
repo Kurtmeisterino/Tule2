@@ -18,6 +18,8 @@
                 <ul>
                     <li><a href="#hem">Hem</a></li>
                     <li><a href="#tjanster">Tjänster</a></li>
+                    <li><a href="#webshop">Webshop</a></li>
+                    <li><a href="#bokning">Boka Tid</a></li>
                     <li><a href="#omoss">Om Oss</a></li>
                     <li><a href="#kontakt">Kontakt</a></li>
                 </ul>
@@ -46,6 +48,50 @@
             <h3>Spraytan</h3>
             <p>Få en perfekt solbränna året runt med vår spraytan.</p>
         </div>
+    </section>
+
+    <!-- Webshop Section -->
+    <section id="webshop" class="container">
+        <h2>Webshop</h2>
+        <div class="product-item">
+            <h3>Produkt 1</h3>
+            <p>Beskrivning av produkt 1.</p>
+            <button class="btn">Lägg i varukorg</button>
+        </div>
+        <div class="product-item">
+            <h3>Produkt 2</h3>
+            <p>Beskrivning av produkt 2.</p>
+            <button class="btn">Lägg i varukorg</button>
+        </div>
+        <div class="product-item">
+            <h3>Produkt 3</h3>
+            <p>Beskrivning av produkt 3.</p>
+            <button class="btn">Lägg i varukorg</button>
+        </div>
+    </section>
+
+    <!-- Bokningssystem Section -->
+    <section id="bokning" class="container">
+        <h2>Boka Tid</h2>
+        <form id="bokningsform">
+            <label for="namn">Namn:</label>
+            <input type="text" id="namn" name="namn" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="tjanst">Välj Tjänst:</label>
+            <select id="tjanst" name="tjanst">
+                <option value="vaxning">Vaxning</option>
+                <option value="naglar">Nageltjänster</option>
+                <option value="spraytan">Spraytan</option>
+            </select>
+            
+            <label for="datum">Välj Datum:</label>
+            <input type="date" id="datum" name="datum" required>
+            
+            <button type="submit" class="btn">Boka Nu</button>
+        </form>
     </section>
 
     <section id="omoss" class="container">
