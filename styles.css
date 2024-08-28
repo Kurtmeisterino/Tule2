@@ -23,7 +23,7 @@ body {
 
 /* Header */
 header {
-    background-color: #e0b1b1;
+    background-color: #f4c6c6; /* Justerad för att matcha loggans bakgrundsfärg */
     padding: 20px 0;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     transition: padding 0.3s ease, box-shadow 0.3s ease;
@@ -53,7 +53,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #fff;
+    color: #fff; /* Vit text för kontrast mot den rosa bakgrunden */
     font-weight: bold;
     padding: 5px 10px;
     transition: background-color 0.3s ease;
@@ -61,7 +61,7 @@ nav ul li a {
 
 nav ul li a:hover {
     background-color: #fff;
-    color: #e0b1b1;
+    color: #f4c6c6; /* Samma rosa färg som headern */
     border-radius: 5px;
 }
 
@@ -69,7 +69,7 @@ nav ul li a:hover {
 .sticky-nav {
     position: sticky;
     top: 0;
-    background-color: #e0b1b1;
+    background-color: #f4c6c6; /* Samma färg som headern */
     z-index: 1000;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -104,7 +104,7 @@ header.shrink .logo-img {
         display: none;
         flex-direction: column;
         width: 100%;
-        background-color: #e0b1b1;
+        background-color: #f4c6c6; /* Samma färg som headern */
         padding: 10px 0;
         list-style: none;
         text-align: center;
@@ -154,7 +154,7 @@ header.shrink .logo-img {
 }
 
 #hero .btn {
-    background-color: #e0b1b1;
+    background-color: #f4c6c6; /* Matchar headern */
     color: white;
     padding: 15px 30px;
     text-decoration: none;
@@ -182,7 +182,7 @@ header.shrink .logo-img {
 #about h2 {
     margin-bottom: 20px;
     font-size: 2.5rem;
-    color: #e0b1b1;
+    color: #f4c6c6; /* Matchar headern */
 }
 
 #about p {
@@ -197,7 +197,7 @@ header.shrink .logo-img {
 }
 
 .service-category h3 {
-    background-color: #e0b1b1;
+    background-color: #f4c6c6; /* Matchar headern */
     color: white;
     padding: 10px;
     border-radius: 5px;
@@ -249,11 +249,11 @@ header.shrink .logo-img {
 .form-group input:focus,
 .form-group select:focus {
     outline: none;
-    border-color: #e0b1b1;
+    border-color: #f4c6c6; /* Matchar headern */
 }
 
 .btn-primary {
-    background-color: #e0b1b1;
+    background-color: #f4c6c6; /* Matchar headern */
     color: white;
     padding: 15px;
     border: none;
@@ -342,19 +342,4 @@ footer p {
     }
 
     #hero p {
-        font-size: 0.9rem;
-    }
-
-    .service-category h3 {
-        font-size: 1.2rem;
-    }
-
-    .service-category ul li {
-        font-size: 1rem;
-    }
-
-    .btn-primary {
-        padding: 10px;
-        font-size: 0.9rem;
-    }
-}
+        font-size: 0.
