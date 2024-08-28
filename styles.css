@@ -5,6 +5,7 @@
     box-sizing: border-box;
 }
 
+/* Grundinställningar */
 body {
     font-family: 'Poppins', sans-serif;
     color: #333;
@@ -25,6 +26,7 @@ header {
     background-color: #e0b1b1;
     padding: 20px 0;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: padding 0.3s ease, box-shadow 0.3s ease;
 }
 
 header .logo h1 {
@@ -65,6 +67,48 @@ nav ul li a:hover {
     top: 0;
     background-color: #e0b1b1;
     z-index: 1000;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header.shrink {
+    padding: 10px 0;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #e0b1b1;
+        padding: 10px 0;
+        list-style: none;
+        text-align: center;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
 }
 
 /* Hero Section */
@@ -304,59 +348,5 @@ footer p {
     .btn-primary {
         padding: 10px;
         font-size: 0.9rem;
-    }
-}
-
-/* Sticky Header */
-.sticky-nav {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    background-color: #e0b1b1;
-    z-index: 1000;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-header {
-    background-color: #e0b1b1;
-    padding: 20px 0;
-    transition: padding 0.3s ease, box-shadow 0.3s ease;
-}
-
-header.sticky-nav.shrink {
-    padding: 10px 0;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-/* Hamburger Menu */
-.hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    padding: 10px;
-}
-
-.hamburger div {
-    width: 25px;
-    height: 3px;
-    background-color: #fff;
-    margin: 5px 0;
-    transition: all 0.3s ease;
-}
-
-@media (max-width: 768px) {
-    nav ul {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background-color: #e0b1b1;
-    }
-
-    nav ul.active {
-        display: flex;
-    }
-
-    .hamburger {
-        display: flex;
     }
 }
