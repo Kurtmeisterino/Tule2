@@ -23,64 +23,32 @@ body {
 
 /* Header */
 header {
-    background-color: #f4c6c6; /* Justerad för att matcha loggans bakgrundsfärg */
-    padding: 20px 0;
+    background-color: #f4c6c6; /* Bakgrundsfärg för headern */
+    padding: 0; /* Ta bort extra padding */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     transition: padding 0.3s ease, box-shadow 0.3s ease;
+    height: 200px; /* Öka höjden på headern för att få plats med en större logga */
 }
 
 header .logo {
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100%; /* Loggan täcker hela headerns höjd */
 }
 
 header .logo-img {
-    height: 120px; /* Anpassa höjden efter dina behov */
-    width: auto;  /* Behåll proportionerna */
+    height: 100%; /* Loggan täcker hela headerns höjd */
+    width: auto;  /* Behåll proportionerna för att undvika distortion */
 }
 
-nav ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    margin-top: 10px;
-}
-
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #fff; /* Vit text för kontrast mot den rosa bakgrunden */
-    font-weight: bold;
-    padding: 5px 10px;
-    transition: background-color 0.3s ease;
-}
-
-nav ul li a:hover {
-    background-color: #fff;
-    color: #f4c6c6; /* Samma rosa färg som headern */
-    border-radius: 5px;
-}
-
-/* Sticky Navigation */
-.sticky-nav {
-    position: sticky;
-    top: 0;
-    background-color: #f4c6c6; /* Samma färg som headern */
-    z-index: 1000;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}
-
+/* Shrink header on scroll */
 header.shrink {
-    padding: 10px 0;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    height: 150px; /* Om du vill att headern och loggan minskar något när du scrollar */
 }
 
 header.shrink .logo-img {
-    height: 90px; /* Anpassa höjden på loggan när sidan scrollas */
+    height: 100%; /* Loggan täcker fortfarande hela headerns höjd när den är "shrinked" */
 }
 
 /* Hamburger Menu */
@@ -90,27 +58,31 @@ header.shrink .logo-img {
     cursor: pointer;
     padding: 10px;
     position: absolute;
-    top: 10px;
+    top: 20px;
     right: 20px;
     z-index: 10;
 }
 
 .hamburger div {
-    width: 25px;
+    width: 30px;
     height: 3px;
-    background-color: #000; /* Färg hamburgerstrecken svarta */
+    background-color: #000; /* Svart färg på hamburger-menyn */
     margin: 5px 0;
     transition: all 0.3s ease;
 }
 
+/* Responsiv Design */
 @media (max-width: 768px) {
+    header {
+        height: 180px; /* Anpassa höjden på headern för mindre skärmar */
+    }
+
     nav ul {
         display: none;
         flex-direction: column;
         width: 100%;
-        background-color: #f4c6c6; /* Samma färg som headern */
+        background-color: #f4c6c6;
         padding: 10px 0;
-        list-style: none;
         text-align: center;
     }
 
@@ -122,228 +94,3 @@ header.shrink .logo-img {
         display: flex;
     }
 }
-
-/* Hero Section */
-#hero {
-    position: relative;
-    background: url('hero-image.jpg') no-repeat center center/cover;
-    color: white;
-    text-align: center;
-    padding: 150px 20px;
-    margin-bottom: 40px;
-}
-
-#hero .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1;
-}
-
-#hero h2 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    z-index: 2;
-    position: relative;
-}
-
-#hero p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-    z-index: 2;
-    position: relative;
-}
-
-#hero .btn {
-    background-color: #f4c6c6; /* Matchar headern */
-    color: white;
-    padding: 15px 30px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 1.2rem;
-    z-index: 2;
-    position: relative;
-    transition: background-color 0.3s ease;
-}
-
-#hero .btn:hover {
-    background-color: #d18b8b;
-}
-
-/* About Section */
-#about {
-    padding: 50px 20px;
-    text-align: center;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 40px;
-}
-
-#about h2 {
-    margin-bottom: 20px;
-    font-size: 2.5rem;
-    color: #f4c6c6; /* Matchar headern */
-}
-
-#about p {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    margin-bottom: 20px;
-}
-
-/* Service Category Styling */
-.service-category {
-    margin-bottom: 40px;
-}
-
-.service-category h3 {
-    background-color: #f4c6c6; /* Matchar headern */
-    color: white;
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-}
-
-.service-category ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.service-category ul li {
-    font-size: 1.1rem;
-    margin-bottom: 10px;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 5px;
-}
-
-/* Form Grid */
-.form-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.form-group {
-    display: flex;
-    flex-direction: column;
-}
-
-.form-group label {
-    font-weight: bold;
-    margin-bottom: 8px;
-    color: #333;
-}
-
-.form-group input,
-.form-group select {
-    padding: 12px;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-    font-size: 1rem;
-    transition: border-color 0.3s ease;
-}
-
-.form-group input:focus,
-.form-group select:focus {
-    outline: none;
-    border-color: #f4c6c6; /* Matchar headern */
-}
-
-.btn-primary {
-    background-color: #f4c6c6; /* Matchar headern */
-    color: white;
-    padding: 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.btn-primary i {
-    margin-right: 8px;
-}
-
-.btn-primary:hover {
-    background-color: #d18b8b;
-}
-
-/* Bekräftelsemeddelande */
-.confirmation {
-    margin-top: 30px;
-    background-color: #f4f4f4;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    text-align: center;
-}
-
-.confirmation h3 {
-    color: #4caf50;
-}
-
-/* Footer */
-footer {
-    background: #333;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 40px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-footer p {
-    margin: 0;
-    font-size: 0.9rem;
-}
-
-/* Responsiv Design */
-@media (max-width: 768px) {
-    header .logo-img {
-        height: 90px; /* Justera för mindre skärmar */
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #hero {
-        padding: 100px 20px;
-    }
-
-    #hero h2 {
-        font-size: 2.5rem;
-    }
-
-    #hero p {
-        font-size: 1rem;
-    }
-
-    .form-grid {
-        gap: 15px;
-    }
-}
-
-@media (max-width: 480px) {
-    header .logo-img {
-        height: 70px; /* Justera för mindre skärmar */
-    }
-
-    #hero h2 {
-        font-size: 2rem;
-    }
-
-    #hero p {
-        font-size
