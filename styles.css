@@ -29,11 +29,15 @@ header {
     transition: padding 0.3s ease, box-shadow 0.3s ease;
 }
 
-header .logo h1 {
-    text-align: center;
-    color: #fff;
-    font-size: 2.5rem;
-    font-weight: 700;
+header .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .logo-img {
+    height: 80px; /* Anpassa höjden efter dina behov */
+    width: auto;  /* Behåll proportionerna */
 }
 
 nav ul {
@@ -73,6 +77,10 @@ nav ul li a:hover {
 header.shrink {
     padding: 10px 0;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+header.shrink .logo-img {
+    height: 60px; /* Anpassa höjden på loggan när sidan scrollas */
 }
 
 /* Hamburger Menu */
@@ -298,8 +306,8 @@ footer p {
 
 /* Responsiv Design */
 @media (max-width: 768px) {
-    header .logo h1 {
-        font-size: 2rem;
+    header .logo-img {
+        height: 60px; /* Justera för mindre skärmar */
     }
 
     nav ul {
@@ -325,8 +333,8 @@ footer p {
 }
 
 @media (max-width: 480px) {
-    header .logo h1 {
-        font-size: 1.5rem;
+    header .logo-img {
+        height: 50px; /* Justera för mindre skärmar */
     }
 
     #hero h2 {
